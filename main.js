@@ -6,6 +6,9 @@ function previewImage(event) {
   };
   reader.readAsDataURL(event.target.files[0]);
 }
+
+var domNode = document.querySelector(".frame");
+var scale = 2;
 document.getElementById("shareButton").addEventListener("click", function () {
   // html2canvas(document.querySelector(".frame")).then((canvas) => {
   //   var imgData = canvas.toDataURL("image/png");
@@ -14,10 +17,19 @@ document.getElementById("shareButton").addEventListener("click", function () {
   //   link.href = imgData;
   //   link.click();
   // });
-  domtoimage.toJpeg(document.querySelector(".frame")).then(function (dataUrl) {
-    var link = document.createElement("a");
-    link.download = "download.jpeg";
-    link.href = dataUrl;
-    link.click();
-  });
+  domtoimage
+    .toJpeg(domNode, {
+      width: domNode.clientWidth * scale,
+      height: domNode.clientHeight * scale,
+      style: {
+        transform: "scale(" + scale + ")",
+        transformOrigin: "top left",
+      },
+    })
+    .then(function (dataUrl) {
+      var link = document.createElement("a");
+      link.download = "download.jpeg";
+      link.href = dataUrl;
+      link.click();
+    });
 });
