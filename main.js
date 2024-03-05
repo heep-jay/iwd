@@ -7,11 +7,17 @@ function previewImage(event) {
   reader.readAsDataURL(event.target.files[0]);
 }
 document.getElementById("shareButton").addEventListener("click", function () {
-  html2canvas(document.querySelector(".body")).then((canvas) => {
-    var imgData = canvas.toDataURL("image/png");
+  // html2canvas(document.querySelector(".frame")).then((canvas) => {
+  //   var imgData = canvas.toDataURL("image/png");
+  //   var link = document.createElement("a");
+  //   link.download = "frame.png";
+  //   link.href = imgData;
+  //   link.click();
+  // });
+  domtoimage.toJpeg(document.querySelector(".frame")).then(function (dataUrl) {
     var link = document.createElement("a");
-    link.download = "frame.png";
-    link.href = imgData;
+    link.download = "download.jpeg";
+    link.href = dataUrl;
     link.click();
   });
 });

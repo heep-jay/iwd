@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +23,8 @@ body {
   width: 100%;
   overflow: hidden;
   background: #fff;
+  padding: 1rem 0;
+  max-width: 850px;
 }
 
 .box {
@@ -31,9 +35,11 @@ body {
   background-color: #f0f0f0;
   max-width: 822px;
   position: relative;
-
   background: #e5e6e8;
   margin: auto;
+}
+p {
+  font-family: "Poppins", sans-serif;
 }
 .hashtag {
   position: absolute;
@@ -54,7 +60,7 @@ body {
 }
 .attending {
   padding-top: 2rem;
-  font-size: clamp(1.125rem, 0.0313rem + 3.5vw, 2rem);
+  font-size: clamp(1.025rem, 0.0313rem + 3.5vw, 2rem);
   color: #525254;
 }
 .big-text {
@@ -63,6 +69,7 @@ body {
 }
 .big-text h1 {
   font-size: clamp(1.05625rem, 0.1016rem + 3.375vw, 2rem);
+  font-weight: 200;
 }
 .big-text h2 {
   width: 50%;
@@ -97,8 +104,8 @@ body {
 .image-box img {
   width: 100%;
   height: 100%;
-
-  object-fit: contain;
+  max-width: 312px;
+  object-fit: cover;
 }
 
 input[type="file"] {
@@ -113,13 +120,13 @@ input[type="file"] {
 }
 
 .theme {
-  padding: 0.8rem;
+  padding: 0.6rem;
   margin-left: 2rem;
   background: red;
   width: fit-content;
   color: #fff;
   font-size: clamp(0.84375rem, 0.3359rem + 1.625vw, 1.25rem);
-  font-weight: 600;
+  font-weight: 800;
 }
 .p-text {
   color: #064e9e;
@@ -173,10 +180,21 @@ input[type="file"] {
 }
 .share-link {
   z-index: 999;
+  margin-top: 2rem;
+}
+.share-link a {
+  padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background: #064e9e;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
 @media screen and (max-width: 500px) {
   .box {
-    height: 420px;
+    height: 450px;
     /* width: 100vw; */
   }
   .mid-section {
@@ -224,7 +242,7 @@ input[type="file"] {
 
 @media screen and (orientation: landscape) {
   .box {
-    overflow-y: scroll;
+    overflow-y: none;
     aspect-ratio: unset; /* Reset aspect ratio for landscape */
   }
 }
