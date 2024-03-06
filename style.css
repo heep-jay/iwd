@@ -58,6 +58,15 @@ p {
   margin-left: 2rem;
 }
 
+.theme-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.theme-text p:nth-child(2) {
+  color: #fff;
+  font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
+}
 .attending {
   padding-top: 2rem;
   font-size: clamp(1.025rem, 0.0313rem + 3.5vw, 2rem);
@@ -124,7 +133,6 @@ input[type="file"] {
 }
 
 .theme {
-  margin-top: 2rem;
   padding: 0.6rem;
   margin-left: 2rem;
   background: red;
@@ -244,6 +252,12 @@ input[type="file"] {
     margin-top: 0rem;
     padding: 0.2rem !important;
     font-size: 12px;
+  }
+  .theme-text {
+    gap: 0.4rem;
+  }
+  .theme-text p:nth-child(2) {
+    font-size: 13px;
   }
   .p-text {
     margin-top: 0.6rem;
