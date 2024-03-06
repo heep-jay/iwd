@@ -31,7 +31,6 @@ body {
   /* height: 100%; */
   width: 100%;
   height: 80vh;
-
   aspect-ratio: 3 / 4; /* Desired aspect ratio (width/height) */
   background-color: #f0f0f0;
   max-width: 822px;
@@ -221,7 +220,7 @@ input[type="file"] {
 }
 @media screen and (max-width: 500px) {
   .box {
-    height: 450px;
+    height: 420px;
     aspect-ratio: unset;
     max-height: 500px;
     /* width: 100vw; */
@@ -230,11 +229,12 @@ input[type="file"] {
     height: 10vh;
   }
   .blue {
-    width: 55%;
+    width: 53%;
   }
   .image-box {
-    height: 23vh;
-    width: 45%;
+    height: 28vh;
+    /* height: 500px; */
+    width: 47%;
   }
   .attending,
   .big-text {
@@ -260,7 +260,7 @@ input[type="file"] {
     font-size: 13px;
   }
   .p-text {
-    margin-top: 0.6rem;
+    margin-top: 0.3rem;
     font-size: 9.2px;
     font-weight: 500;
   }
