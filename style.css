@@ -119,7 +119,7 @@ input[type="file"] {
   height: 100%;
   opacity: 0;
   cursor: pointer;
-  display: none;
+  /* display: none; */
 }
 
 .theme {
