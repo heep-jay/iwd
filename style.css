@@ -51,7 +51,9 @@ p {
 }
 .attending,
 .big-text,
-.theme {
+.theme,
+.p-text,
+.date {
   margin-left: 2rem;
 }
 
@@ -86,6 +88,10 @@ p {
   height: 100%;
   background: #064e9e;
   width: 55%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
 .red {
   height: 100%;
@@ -113,7 +119,7 @@ input[type="file"] {
   height: 100%;
   opacity: 0;
   cursor: pointer;
-  /* display: none; */
+  display: none;
 }
 
 .theme {
@@ -127,11 +133,18 @@ input[type="file"] {
   font-weight: 800;
 }
 .p-text {
-  color: #064e9e;
   font-weight: 600;
   margin-top: 1.5rem;
-  margin-left: 2rem;
+
   font-size: clamp(0.75rem, 0.2813rem + 1.5vw, 1.125rem);
+  color: #fff;
+}
+.date {
+  color: #064e9e;
+  margin-top: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1rem, -0.0938rem + 3.5vw, 1.875rem);
+  font-weight: 300;
 }
 
 .bottom {
@@ -190,6 +203,13 @@ input[type="file"] {
   font-family: "Poppins", sans-serif;
   cursor: pointer;
 }
+.confetti {
+  width: 50%;
+  max-width: 412px;
+  position: absolute;
+  top: 17%;
+  right: 1%;
+}
 @media screen and (max-width: 500px) {
   .box {
     height: 450px;
@@ -198,22 +218,34 @@ input[type="file"] {
   .mid-section {
     height: 10vh;
   }
+  .blue {
+    width: 55%;
+  }
   .image-box {
-    height: 20vh;
+    height: 23vh;
+    width: 45%;
   }
   .attending,
   .big-text {
     margin-left: 0.9rem;
   }
   .theme,
-  .p-text {
+  .p-text,
+  .date {
     margin-left: 0.9rem;
   }
+  .date {
+    margin-top: 2rem;
+  }
   .theme {
-    padding: 0.5rem !important;
+    margin-top: 0rem;
+    padding: 0.2rem !important;
+    font-size: 12px;
   }
   .p-text {
     margin-top: 0.6rem;
+    font-size: 9.2px;
+    font-weight: 500;
   }
   .big-text {
     margin-top: 0.8rem;
